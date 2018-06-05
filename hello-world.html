@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/views/main.js"></script>
+	<title>CapstoneDesign1</title>
+	<!-- your custom css -->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+  <!--Header-->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <a class="navbar-brand" href="#">CapstoneDesign1</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#first">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#upload">Upload</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#download">Download</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#datashop">Datashop</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--// Header-->
+  
+  <!--About-->
+  	<section id="first">
+  		 <h2 class="sr-only">Capstone Project 1</h2>
+  		 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner" role="listbox">
+			    <section class="carousel-item active">
+			      <h4 class="carousel__title mb-5" lang="en">Data Shop</h4>
+			      <p class="carousel__text mb-5">위변조 불가능한 자신만의 데이터를 가져보세요.<br>지금 당장 등록해보세요.</p>
+			      <a href="#about" class="btn bg-primary px-4 py-3">자세히 보기</a>
+			    </section>
+			    <section class="carousel-item">
+			      <h4 class="carousel__title  mb-5" lang="en">Data Register</h4>
+			      <p class="carousel__text mb-5">Block Chain 무결성이 저작권을 보호합니다.<br>검증된 시스템 안에서  저작권 문제를 해결해보세요.</p>		
+			      <a href="#upload" class="btn bg-primary px-4 py-3">자세히 보기</a>
+			    </section>
+			    <section class="carousel-item">
+			      <h4 class="carousel__title mb-5" lang="en">Capstone Coin</h4>
+			      <p class="carousel__text mb-5">데이터 등록에 대한 보상으로 코인을 받아보세요.</p>		
+			      <a href="#download" class="btn bg-primary px-4 py-3">자세히 보기</a>			      
+			    </section>
+			  </div>
+       </div>
+  	</section>
+  <!--// About-->
+  
+  <!--Upload-->
+  <section id="about" class="section">
+  	<div class="container">
+	  	<header class="section__header">
+		  	<h2 class="section__title mb-4">
+		  		<span class="section__category mb-2" lang="en">About</span><br>
+		  		Block Chain 기반 데이터 거래소
+		  	</h2>
+	  	</header>
+	  	<div class="about__data d-flex justify-content-center mb-3">
+	  		<p class="about__datum px-4 px-md-5"><strong class="about__number text-primary">150</strong>
+	  		코인종류</p>
+	  		<p class="about__datum px-4 px-md-5"><strong class="about__number text-primary">2,350,000</strong>
+	  		거래횟수</p>
+	  		<p class="about__datum px-4 px-md-5"><strong class="about__number text-primary">60,000,000</strong>
+	  		거래총액</p>
+	  	</div>
+
+      	<div class="section__text">
+    	     	용량이 큰 데이터를 블록에 저장하기는 쉽지 않습니다.<br> 이미지를 해싱한 string형을 노드에 전송함으로써 조금 더 빠른 속도로 노드가 탐색되도록 합니다.<br>
+    	  		이미지 위변조시 해시값이 달라지게 됨으로, 위변조 추적이 가능하게 됩니다. 
+  	    </div>
+  	</div>
+  </section>
+  <!--// Upload-->
+  
+<!--Data Upload-->
+<section id="upload" class="section" style="background-color:#f7f7f7;">
+  	<div class="container">
+    	<header class="section__header">
+  	  	<h2 class="section__title mb-4">
+  	  		<span class="section__category mb-2" lang="en">UPLOAD</span><br>
+  	  		Data Registration
+  	  	</h2>
+    	</header>
+    <form id="uploadData" action="/upload" method="post" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="s_wallet">Wallet Address</label>
+          <input type="text" class="form-control" name="s_wallet" id="s_wallet" placeholder="Address">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="dataPrice">Price</label>
+          <input type="text" class="form-control" name="cost" id="cost" placeholder="Price">
+        </div>
+      </div>
+      <input type="file" id="uploadFile" name="img">
+      <input type="submit" class="btn btn-default" value="업로드">
+    </form>
+</section>
+
+<!--//Data upload-->
+
+<!--Data download-->
+<section id="download" class="section">
+	<div class="container">
+  	<header class="section__header">
+    	<h2 class="section__title mb-4">
+    		<span class="section__category mb-2" lang="en">DOWNLOAD</span><br>
+    		Data Download
+    	</h2>
+  	</header>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6" action="/download" method="post">
+          <label for="b_wallet">Buyer Wellet Address</label>
+          <input type="text" class="form-control" name="b_wallet" id="b_wallet" placeholder="Address">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="dataId">Data Id(HashString)</label>
+          <input type="text" class="form-control" name="dataId" id="dataId" placeholder="ID">
+        </div>
+      </div>
+      <input type="submit" value="다운로드" class="btn btn-default">
+    </form> 	
+</section>
+<!--//Data download-->
+
+<!--data list-->
+<section id="datashop" class="section" style="background-color:#f7f7f7;">
+	<div class="container">
+  	<header class="section__header">
+    	<h2 class="section__title mb-4">
+    		<span class="section__category mb-2" lang="en">DATALIST</span><br>
+    		Data Business List
+    	</h2>
+  	</header>
+  <div class="col-lg-12">
+    <div class="row">
+      <table class="table" id="data_list">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Filename</th>
+            <th scope="col">Seller's Wallet Address</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<!--//data list-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+	
+	</div>
+	
+	<!-- 합쳐지고 최소화된 최신 CSS -->
+	<script> 
+	var myButton = document.getElementById("clickButton");
+	var myText = document.getElementById("helloText");
+	
+	myButton.addEventListener('click', doSomething, false)
+	
+	function doSomething() {
+		myText.textContent = "hello, world!";
+	}
+	</script>
+
+</body>
+</html>
